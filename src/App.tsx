@@ -11,6 +11,7 @@ import { FaqSection } from "./components/FaqSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
+import { ChatBot } from "./components/ChatBot";
 
 export default function App() {
   return (
@@ -53,6 +54,9 @@ export default function App() {
 
       {/* Discreet Mobile/Desktop Floating WhatsApp */}
       <FloatingWhatsApp />
+
+      {/* Intelligent AI Assistant ChatBot */}
+      <ChatBot />
     </div>
   );
 }
