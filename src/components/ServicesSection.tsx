@@ -5,6 +5,7 @@ import {
   Share2,
   Search,
   Layers,
+  GraduationCap,
   ArrowRight,
   CheckCircle2,
   X,
@@ -127,6 +128,27 @@ export const ServicesSection: React.FC = () => {
       whatsappMessage:
         "Bonjour Zoé Digitech, je souhaite digitaliser les processus internes de mon entreprise.",
     },
+    {
+      id: "formations",
+      number: "06",
+      title: "Formations pratiques",
+      subtitle:
+        "Montée en compétences numériques et IA pour particuliers et équipes d'entreprises (B2B).",
+      description:
+        "Des programmes immersifs et 100% orientés pratique pour maîtriser l'intelligence artificielle, la création de sites web, les réseaux sociaux et l'automatisation de vos tâches quotidiennes.",
+      icon: GraduationCap,
+      deliverables: [
+        "Formations individuelles (étudiants, entrepreneurs solos, indépendants, reconversion)",
+        "Formations intra-entreprises B2B sur-mesure (commerciaux, marketing, secrétariat, RH)",
+        "Ateliers pratiques IA générative (ChatGPT, Claude, prompts métiers, gain de productivité)",
+        "Modules création web moderne & gestion professionnelle des réseaux sociaux",
+        "Cas pratiques concrets, support post-formation et attestation de fin de session",
+      ],
+      audienceExample:
+        "Idéal pour tout individu souhaitant acquérir des compétences concrètes d'avenir, et pour dirigeants de PME désireux de rendre leurs équipes plus rapides et autonomes.",
+      whatsappMessage:
+        "Bonjour Zoé Digitech, je souhaite des informations sur vos modules de formation (particulier ou formation B2B en entreprise).",
+    },
   ];
 
   return (
@@ -136,29 +158,26 @@ export const ServicesSection: React.FC = () => {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <p className="text-xs font-bold uppercase tracking-wider text-[#EBA818] mb-2 font-mono">
-            Nos Domaines d'Intervention
+            Nos Domaines d'Intervention & Formations
           </p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A659E] tracking-tight text-balance">
-            Une seule agence pour accélérer votre transformation digitale.
+            Une seule agence pour accélérer votre transformation digitale et former vos équipes.
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
-            De la vitrine web jusqu'à l'automatisation par l'IA, nous combinons les
+            De la vitrine web jusqu'à la formation pratique de vos talents, nous combinons les
             expertises indispensables pour faire grandir votre entreprise.
           </p>
         </div>
 
-        {/* 5 Services Bento / Grid */}
+        {/* 6 Services Bento / Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => {
+          {services.map((service) => {
             const Icon = service.icon;
-            const isFeatured = index === 0 || index === 1;
 
             return (
               <div
                 key={service.id}
-                className={`relative bg-white rounded-xl border border-slate-200/80 p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:shadow-lg hover:border-[#1A659E]/40 group ${
-                  index === 4 ? "md:col-span-2 lg:col-span-1" : ""
-                }`}
+                className="relative bg-white rounded-xl border border-slate-200/80 p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:shadow-lg hover:border-[#1A659E]/40 group"
               >
                 <div>
                   {/* Top Bar with Number & Icon */}

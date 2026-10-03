@@ -17,6 +17,7 @@ interface ChatMessage {
 
 const QUICK_SUGGESTIONS = [
   "Quels sont vos tarifs indicatifs ?",
+  "Quelles formations proposez-vous (Solo & B2B) ?",
   "Combien de temps pour un site web ?",
   "Quelles automatisations IA proposez-vous ?",
   "Quelles sont vos garanties et paiements ?",
@@ -27,6 +28,25 @@ const QUICK_SUGGESTIONS = [
 function getDirectAnswer(query: string): string {
   const q = query.toLowerCase();
 
+  if (q.includes("formation") || q.includes("former") || q.includes("apprendre") || q.includes("cours") || q.includes("atelier") || q.includes("b2b") || q.includes("etudiant") || q.includes("étudiant") || q.includes("particulier")) {
+    return (
+      "Chez **ZOÉ DIGITECH**, nous proposons des **Formations Pratiques & Opérationnelles** adaptées aux besoins de chacun :\n\n" +
+      "### 1. Formations pour Individus / Particuliers (Solo)\n" +
+      "• **Pour qui :** Étudiants, professionnels indépendants, créateurs d'entreprise ou personnes en reconversion.\n" +
+      "• **Modules disponibles :**\n" +
+      "  - *Maîtrise de l'IA au quotidien* (ChatGPT, Claude, prompt engineering, automatisation de ses tâches).\n" +
+      "  - *Création de sites web modernes No-Code* (concevoir et lancer son site sans coder).\n" +
+      "  - *Marketing digital & Community Management* (Canva, stratégie de contenu, publicité Meta Ads).\n" +
+      "• **Tarif indicatif :** de **50 000 à 150 000 FCFA** par module ou session intensive.\n\n" +
+      "### 2. Formations Intra-Entreprises (B2B)\n" +
+      "• **Pour qui :** Équipes commerciales, marketing, secrétariat, service client, RH et managers de PME.\n" +
+      "• **Objectif :** Rendre vos collaborateurs plus productifs, supprimer les tâches répétitives et intégrer l'IA dans leurs routines de travail.\n" +
+      "• **Format :** Ateliers sur-mesure de 1 à 3 jours (en présentiel dans vos locaux à Yaoundé/Douala ou en visioconférence).\n" +
+      "• **Tarif indicatif :** de **150 000 à 450 000 FCFA** pour une session d'équipe selon l'effectif.\n\n" +
+      "Toutes nos formations sont 100% axées sur la pratique avec des cas réels, des supports de cours fournis et une attestation de fin de formation. Quel module vous intéresse le plus ?"
+    );
+  }
+
   if (q.includes("tarif") || q.includes("prix") || q.includes("cout") || q.includes("coût") || q.includes("combien")) {
     return (
       "Voici nos **tarifs indicatifs et transparents** pour vos projets chez **ZOÉ DIGITECH** :\n\n" +
@@ -34,8 +54,9 @@ function getDirectAnswer(query: string): string {
       "2. **Site Web Corporate & Institutionnel** : à partir de **350 000 à 650 000 FCFA** (pages illimitées, blog d'actualités, SEO poussé, prêt en 2 à 3 semaines).\n" +
       "3. **Site E-Commerce & Vente en ligne** : à partir de **400 000 à 800 000 FCFA** (catalogue produits, commande WhatsApp et/ou Mobile Money MTN/Orange, espace admin simple).\n" +
       "4. **Solutions IA & Chatbot Automatisé** : à partir de **100 000 à 500 000 FCFA** selon les fonctionnalités souhaitées.\n" +
-      "5. **Gestion Réseaux Sociaux (Community Management)** : à partir de **80 000 à 250 000 FCFA / mois** (création visuels, rédaction et publicité ciblée).\n" +
-      "6. **Référencement Google Maps / Local** : à partir de **75 000 à 200 000 FCFA**.\n\n" +
+      "5. **Formations Pratiques (Particuliers & B2B)** : de **50 000 à 150 000 FCFA** (individuel) et de **150 000 à 450 000 FCFA** (intra-entreprise B2B).\n" +
+      "6. **Gestion Réseaux Sociaux (Community Management)** : à partir de **80 000 à 250 000 FCFA / mois** (création visuels, rédaction et publicité ciblée).\n" +
+      "7. **Référencement Google Maps / Local** : à partir de **75 000 à 200 000 FCFA**.\n\n" +
       "Tous nos forfaits incluent la formation gratuite de votre équipe et 1 mois d'assistance technique offerte. Quel est votre projet ?"
     );
   }

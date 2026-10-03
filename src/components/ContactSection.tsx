@@ -27,6 +27,7 @@ export const ContactSection: React.FC = () => {
   const servicesList = [
     "Création de site web professionnel",
     "Automatisation & Assistant IA",
+    "Formation pratique (Particulier ou Équipe B2B)",
     "Communication digitale & réseaux sociaux",
     "Référencement SEO & Google Maps (GEO)",
     "Digitalisation des processus",

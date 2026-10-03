@@ -5,7 +5,7 @@ import webDemoImg from "../assets/images/demo_project_web_1791026255504.jpg";
 import aiDemoImg from "../assets/images/demo_project_ai_automation_1791026270263.jpg";
 import commDemoImg from "../assets/images/demo_project_comm_seo_1791026285787.jpg";
 
-type CategoryKey = "all" | "sites-web" | "landing-pages" | "applications" | "automatisation" | "communication";
+type CategoryKey = "all" | "sites-web" | "landing-pages" | "applications" | "automatisation" | "communication" | "formations";
 
 interface PortfolioProject {
   id: string;
@@ -31,6 +31,7 @@ export const PortfolioSection: React.FC = () => {
     { key: "applications", label: "Applications" },
     { key: "automatisation", label: "Automatisation" },
     { key: "communication", label: "Communication digitale" },
+    { key: "formations", label: "Formations (B2B & Solo)" },
   ];
 
   const projects: PortfolioProject[] = [
@@ -123,6 +124,24 @@ export const PortfolioSection: React.FC = () => {
       ],
       techStack: ["Meta Business Suite", "Google Search Console", "Graphisme & Copywriting"],
       targetSector: "Hôtellerie, restauration, instituts de beauté & loisirs",
+    },
+    {
+      id: "demo-formation-ia",
+      category: "formations",
+      categoryLabel: "Formations",
+      title: "Programme Pratique : Maîtrise de l'IA & Outils Digitaux (B2B & Particuliers)",
+      typeBadge: "Projet démo",
+      image: aiDemoImg,
+      objective:
+        "Former des professionnels indépendants et des équipes d'entreprises à utiliser l'IA générative (ChatGPT, Claude, automatisation) et les outils numériques pour gagner plusieurs heures par semaine.",
+      features: [
+        "Ateliers 100% pratiques sur cas concrets d'entreprises locales",
+        "Formules modulables : sessions individuelles ou séminaires d'équipe B2B",
+        "Prise en main des outils d'automatisation et de productivité bureautique",
+        "Supports complets, fiches mémo de prompts et attestation de compétences",
+      ],
+      techStack: ["ChatGPT & Claude", "Make / Automations", "Canva & Meta Tools", "Google Workspace"],
+      targetSector: "Équipes PME, cadres, commerciaux, entrepreneurs solos & étudiants",
     },
   ];
 

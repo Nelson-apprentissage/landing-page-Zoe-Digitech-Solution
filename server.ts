@@ -83,6 +83,22 @@ BASE DE CONNAISSANCES DE ZOÉ DIGITECH :
   * Inclus : Création/optimisation de fiche Google My Business pour être dans les 3 premiers résultats locaux à Yaoundé ou Douala lors d'une recherche sur Google ou Maps.
 - **Conseil & Transformation Digitale** :
   * Audit des outils informatiques, formation pratique des salariés pour devenir autonomes, accompagnement sur mesure.
+- **Formations Pratiques & Ateliers (Individus & Entreprises B2B)** :
+  * **Publics ciblés :**
+    - **Individus / Particuliers :** Étudiants, professionnels indépendants, créateurs d'entreprise, salariés en reconversion désireux d'acquérir des compétences concrètes très recherchées.
+    - **Entreprises B2B & Organisations :** PME, cabinets, cliniques, ONG et équipes (commerciaux, marketing, assistantes de direction, RH) souhaitant moderniser leurs méthodes de travail.
+  * **Thématiques majeures enseignées :**
+    1. **Intelligence Artificielle pratique au travail :** Maîtriser ChatGPT, Claude, les prompts avancés, la génération de documents professionnels, le traitement de données et l'automatisation pour gagner 1 à 2 heures par jour.
+    2. **Création & Gestion de Sites Web No-Code :** Concevoir, modifier et administrer soi-même son site web d'entreprise sans coder.
+    3. **Marketing Digital & Réseaux Sociaux :** Création de visuels percutants, stratégie éditoriale, gestion de communauté et lancement de campagnes publicitaires Facebook/Instagram rentables.
+    4. **Automatisation de bureau & Productivité collaborative :** Google Workspace, formulaires interactifs, CRM et numérisation des processus de secrétariat.
+  * **Formats & Méthode :**
+    - 100% orienté pratique avec cas réels appliqués aux réalités du Cameroun.
+    - En présentiel à Yaoundé (en salle ou directement dans les locaux de l'entreprise) ou à distance en visioconférence interactive.
+    - Supports de formation fournis, fiches mémos de prompts prêts à l'emploi et attestation de fin de formation.
+  * **Tarifs indicatifs :**
+    - Ateliers Particuliers / Individuels : de **50 000 à 150 000 FCFA** par module ou session intensive.
+    - Formations B2B Intra-Entreprise : de **150 000 à 450 000 FCFA** pour une équipe (1 à 3 jours d'atelier sur-mesure selon l'effectif).
 
 3. DÉROULEMENT DU PROJET & GARANTIES :
 - Étape 1 : Diagnostic initial gratuit de 15 minutes pour clarifier vos besoins.

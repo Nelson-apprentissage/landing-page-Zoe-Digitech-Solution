@@ -53,6 +53,11 @@ export const Footer: React.FC = () => {
                   Digitalisation des processus PME
                 </a>
               </li>
+              <li>
+                <a href="#solutions" className="hover:text-[#EBA818] transition-colors">
+                  Formations pratiques (Particuliers & B2B)
+                </a>
+              </li>
             </ul>
           </div>
 
