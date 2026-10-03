@@ -74,7 +74,7 @@ export const ContactSection: React.FC = () => {
           <p className="text-xs font-bold uppercase tracking-wider text-[#EBA818] mb-2 font-mono">
             Contact & Devis Gratuit
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#123952] tracking-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A659E] tracking-tight text-balance">
             Parlons de votre projet en toute simplicité
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
@@ -87,44 +87,44 @@ export const ContactSection: React.FC = () => {
           
           {/* Contact Information & Channels */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs">
-              <h3 className="text-xl font-bold text-[#123952] mb-6">
+            <div className="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 shadow-xs">
+              <h3 className="text-lg sm:text-xl font-bold text-[#1A659E] mb-5 sm:mb-6">
                 Nos coordonnées
               </h3>
 
-              <div className="space-y-5 text-sm">
+              <div className="space-y-4 sm:space-y-5 text-sm">
                 {/* WhatsApp */}
                 <a
                   href={buildWhatsAppLink()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3.5 p-3 rounded-xl bg-emerald-50/60 hover:bg-emerald-50 border border-emerald-200/60 transition-colors group"
+                  className="flex items-start gap-3 sm:gap-3.5 p-3 rounded-xl bg-emerald-50/60 hover:bg-emerald-50 border border-emerald-200/60 transition-colors group min-h-[48px]"
                 >
                   <div className="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
                     <MessageCircle className="w-5 h-5 fill-current" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs font-semibold text-emerald-800 uppercase tracking-wider">
                       WhatsApp officiel
                     </p>
-                    <p className="font-bold text-slate-900 group-hover:text-emerald-700">
+                    <p className="font-bold text-slate-900 group-hover:text-emerald-700 truncate">
                       {AGENCY_CONFIG.whatsapp}
                     </p>
-                    <p className="text-xs text-slate-500">Cliquer pour démarrer la discussion directe</p>
+                    <p className="text-xs text-slate-500">Cliquer pour démarrer la discussion</p>
                   </div>
                 </a>
 
                 {/* Telephone */}
                 <a
                   href={`tel:${AGENCY_CONFIG.phoneRaw}`}
-                  className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors"
+                  className="flex items-start gap-3 sm:gap-3.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors min-h-[48px]"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#123952]/5 text-[#123952] flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-[#1A659E]/10 text-[#1A659E] flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs text-slate-500 font-medium">Téléphone direct</p>
-                    <p className="font-semibold text-slate-900">{AGENCY_CONFIG.phone}</p>
+                    <p className="font-semibold text-slate-900 truncate">{AGENCY_CONFIG.phone}</p>
                     <p className="text-xs text-slate-500">Appel vocal direct (Cameroun)</p>
                   </div>
                 </a>
@@ -132,21 +132,21 @@ export const ContactSection: React.FC = () => {
                 {/* Email */}
                 <a
                   href={`mailto:${AGENCY_CONFIG.email}`}
-                  className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors"
+                  className="flex items-start gap-3 sm:gap-3.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors min-h-[48px]"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#123952]/5 text-[#123952] flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-[#1A659E]/10 text-[#1A659E] flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs text-slate-500 font-medium">Email professionnel</p>
-                    <p className="font-semibold text-slate-900">{AGENCY_CONFIG.email}</p>
-                    <p className="text-xs text-slate-500">Pour dossiers d'appels d'offres</p>
+                    <p className="font-semibold text-slate-900 truncate">{AGENCY_CONFIG.email}</p>
+                    <p className="text-xs text-slate-500">Pour devis et appels d'offres</p>
                   </div>
                 </a>
 
                 {/* Location */}
-                <div className="flex items-start gap-3.5 p-3 rounded-xl border border-transparent">
-                  <div className="w-10 h-10 rounded-lg bg-[#123952]/5 text-[#123952] flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3 sm:gap-3.5 p-3 rounded-xl border border-transparent">
+                  <div className="w-10 h-10 rounded-lg bg-[#1A659E]/10 text-[#1A659E] flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -157,8 +157,8 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 {/* Availability */}
-                <div className="flex items-start gap-3.5 p-3 rounded-xl border border-transparent">
-                  <div className="w-10 h-10 rounded-lg bg-[#123952]/5 text-[#123952] flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-3 sm:gap-3.5 p-3 rounded-xl border border-transparent">
+                  <div className="w-10 h-10 rounded-lg bg-[#1A659E]/10 text-[#1A659E] flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -169,16 +169,16 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Social Channels */}
-              <div className="mt-8 pt-6 border-t border-slate-100">
+              <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-slate-100">
                 <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
                   Suivez ZOÉ DIGITECH :
                 </p>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <a
                     href={AGENCY_CONFIG.socials.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:text-[#123952] hover:bg-slate-50 transition-colors inline-flex items-center gap-1.5"
+                    className="px-3 py-2 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:text-[#1A659E] hover:bg-slate-50 transition-colors inline-flex items-center gap-1.5 min-h-[40px]"
                   >
                     <span>Facebook</span>
                     <ExternalLink className="w-3 h-3 text-slate-400" />
@@ -187,7 +187,7 @@ export const ContactSection: React.FC = () => {
                     href={AGENCY_CONFIG.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:text-[#123952] hover:bg-slate-50 transition-colors inline-flex items-center gap-1.5"
+                    className="px-3 py-2 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:text-[#1A659E] hover:bg-slate-50 transition-colors inline-flex items-center gap-1.5 min-h-[40px]"
                   >
                     <span>LinkedIn</span>
                     <ExternalLink className="w-3 h-3 text-slate-400" />
@@ -196,7 +196,7 @@ export const ContactSection: React.FC = () => {
                     href={AGENCY_CONFIG.socials.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:text-[#123952] hover:bg-slate-50 transition-colors inline-flex items-center gap-1.5"
+                    className="px-3 py-2 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:text-[#1A659E] hover:bg-slate-50 transition-colors inline-flex items-center gap-1.5 min-h-[40px]"
                   >
                     <span>WhatsApp</span>
                     <ExternalLink className="w-3 h-3 text-slate-400" />
@@ -208,20 +208,20 @@ export const ContactSection: React.FC = () => {
 
           {/* Contact / Lead Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs">
-              <h3 className="text-xl font-bold text-[#123952] mb-2">
+            <div className="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 shadow-xs">
+              <h3 className="text-lg sm:text-xl font-bold text-[#1A659E] mb-1.5 sm:mb-2">
                 Demander mon devis gratuit
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 mb-5 sm:mb-6">
                 Remplissez ce formulaire. Votre demande sera transmise instantanément à un conseiller.
               </p>
 
               {submitted ? (
-                <div className="p-6 rounded-xl bg-emerald-50 border border-emerald-200 text-center animate-in fade-in duration-300">
+                <div className="p-4 sm:p-6 rounded-xl bg-emerald-50 border border-emerald-200 text-center animate-in fade-in duration-300">
                   <div className="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center mx-auto mb-3">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <h4 className="text-lg font-bold text-emerald-950 mb-1">
+                  <h4 className="text-base sm:text-lg font-bold text-emerald-950 mb-1">
                     Merci {formData.name} ! Votre demande a été préparée.
                   </h4>
                   <p className="text-xs sm:text-sm text-emerald-800 mb-5 max-w-md mx-auto">
@@ -241,7 +241,7 @@ export const ContactSection: React.FC = () => {
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#123952] hover:bg-[#0A2234] text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors shadow-sm"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#1A659E] hover:bg-[#124C77] text-white px-5 sm:px-6 py-3.5 rounded-lg text-sm font-semibold transition-colors shadow-sm min-h-[46px]"
                   >
                     <MessageCircle className="w-4 h-4 text-[#EBA818]" />
                     <span>Envoyer maintenant sur WhatsApp</span>
@@ -250,7 +250,7 @@ export const ContactSection: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="text-xs text-slate-500 hover:text-slate-800 underline"
+                      className="text-xs text-slate-500 hover:text-slate-800 underline py-2 min-h-[40px]"
                     >
                       Modifier mes informations
                     </button>
@@ -277,7 +277,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="Ex: Alain Mbarga"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#123952] focus:ring-1 focus:ring-[#123952] text-sm text-slate-900 bg-white"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#1A659E] focus:ring-1 focus:ring-[#1A659E] text-base sm:text-sm text-slate-900 bg-white"
                       />
                     </div>
 
@@ -292,7 +292,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="Ex: Clinique Saint-Luc, Boutique Z..."
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#123952] focus:ring-1 focus:ring-[#123952] text-sm text-slate-900 bg-white"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#1A659E] focus:ring-1 focus:ring-[#1A659E] text-base sm:text-sm text-slate-900 bg-white"
                       />
                     </div>
                   </div>
@@ -310,7 +310,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="Ex: +237 6XX XX XX XX"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#123952] focus:ring-1 focus:ring-[#123952] text-sm text-slate-900 bg-white"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#1A659E] focus:ring-1 focus:ring-[#1A659E] text-base sm:text-sm text-slate-900 bg-white"
                       />
                     </div>
 
@@ -323,7 +323,7 @@ export const ContactSection: React.FC = () => {
                         id="service"
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#123952] focus:ring-1 focus:ring-[#123952] text-sm text-slate-900 bg-white"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#1A659E] focus:ring-1 focus:ring-[#1A659E] text-base sm:text-sm text-slate-900 bg-white"
                       >
                         {servicesList.map((srv, i) => (
                           <option key={i} value={srv}>
@@ -343,7 +343,7 @@ export const ContactSection: React.FC = () => {
                       id="budget"
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#123952] focus:ring-1 focus:ring-[#123952] text-sm text-slate-900 bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#1A659E] focus:ring-1 focus:ring-[#1A659E] text-base sm:text-sm text-slate-900 bg-white"
                     >
                       {budgetOptions.map((opt, i) => (
                         <option key={i} value={opt}>
@@ -361,10 +361,10 @@ export const ContactSection: React.FC = () => {
                     <textarea
                       id="description"
                       rows={3}
-                      placeholder="Expliquez brièvement votre activité et ce que vous souhaitez accomplir (ex: attirer plus de clients, refondre notre site, automatiser nos commandes WhatsApp...)"
+                      placeholder="Expliquez brièvement votre activité et ce que vous souhaitez accomplir..."
                       value={formData.description}
                       onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#123952] focus:ring-1 focus:ring-[#123952] text-sm text-slate-900 bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-[#1A659E] focus:ring-1 focus:ring-[#1A659E] text-base sm:text-sm text-slate-900 bg-white"
                     />
                   </div>
 
@@ -372,7 +372,7 @@ export const ContactSection: React.FC = () => {
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#123952] hover:bg-[#0A2234] text-white font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all active:scale-[0.99]"
+                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#1A659E] hover:bg-[#124C77] text-white font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all active:scale-[0.99] min-h-[48px]"
                     >
                       <Send className="w-4 h-4 text-[#EBA818]" />
                       <span>Envoyer ma demande</span>

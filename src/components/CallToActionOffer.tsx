@@ -7,7 +7,7 @@ export const CallToActionOffer: React.FC = () => {
     "Bonjour Zoé Digitech, je souhaite discuter de mon projet digital et bénéficier d'un diagnostic.";
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-[#123952] via-[#0D2C40] to-[#081B28] text-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-[#1A659E] via-[#124C77] to-[#0E3655] text-white relative overflow-hidden">
       {/* Subtle brand glow effects */}
       <div
         className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-[#EBA818]/15 blur-3xl pointer-events-none"
@@ -27,27 +27,27 @@ export const CallToActionOffer: React.FC = () => {
         </div>
 
         {/* Title exactly as requested */}
-        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6 text-balance">
+        <h2 className="text-xl sm:text-3xl lg:text-5xl font-extrabold text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6 text-balance">
           Vous avez un projet digital mais vous ne savez pas par où commencer ?
         </h2>
 
         {/* Text exactly as requested */}
-        <p className="text-sm sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8">
+        <p className="text-xs sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-8">
           Bénéficiez d'un premier échange avec{" "}
           <strong className="text-white font-semibold">ZOÉ DIGITECH</strong> pour identifier les
           solutions numériques qui peuvent réellement apporter de la valeur à votre activité.
         </p>
 
         {/* Big high-converting WhatsApp Button */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-10">
           <a
             href={buildWhatsAppLink(customMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#EBA818] hover:bg-[#D6940A] text-[#123952] font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 active:scale-[0.98] group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#EBA818] hover:bg-[#D6940A] text-[#124C77] font-bold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-200 active:scale-[0.98] group min-h-[48px]"
           >
-            <MessageCircle className="w-6 h-6 fill-current group-hover:scale-110 transition-transform" />
-            <span>Demander mon diagnostic gratuit</span>
+            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-current group-hover:scale-110 transition-transform shrink-0" />
+            <span className="truncate">Demander mon diagnostic gratuit</span>
           </a>
         </div>
 

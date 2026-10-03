@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
         aria-hidden="true"
       />
       <div
-        className="absolute top-1/2 left-0 -ml-24 w-80 h-80 rounded-full bg-[#123952]/5 blur-3xl pointer-events-none"
+        className="absolute top-1/2 left-0 -ml-24 w-80 h-80 rounded-full bg-[#1A659E]/5 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 
@@ -22,23 +22,23 @@ export const Hero: React.FC = () => {
           {/* Left Column: Text & Conversion CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Trust tag - clean unboxed typographic indicator */}
-            <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#123952] border border-slate-200 bg-white/90 px-3 py-1.5 rounded-md shadow-2xs">
+            <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#1A659E] border border-slate-200 bg-white/90 px-3 py-1.5 rounded-md shadow-2xs">
               <span className="flex h-2 w-2 rounded-full bg-[#EBA818]" />
               <span className="tracking-wide">Agence de transformation digitale & IA</span>
               <span aria-hidden="true" className="text-slate-300">·</span>
               <span className="inline-flex items-center gap-1 text-slate-600">
-                <MapPin className="w-3 h-3 text-[#123952]" />
+                <MapPin className="w-3 h-3 text-[#1A659E]" />
                 Yaoundé, Cameroun
               </span>
             </div>
 
             {/* Main H1 Title - exactly as requested */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#123952] leading-[1.15] tracking-tight text-balance">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A659E] leading-[1.18] sm:leading-[1.15] tracking-tight text-balance break-words">
               Transformez votre activité grâce au{" "}
-              <span className="relative whitespace-nowrap">
-                <span className="relative z-10 text-[#123952]">digital</span>
+              <span className="relative whitespace-normal sm:whitespace-nowrap">
+                <span className="relative z-10 text-[#1A659E]">digital</span>
                 <span
-                  className="absolute bottom-1.5 left-0 w-full h-3 bg-[#EBA818]/30 -z-0 rounded-xs"
+                  className="absolute bottom-1 left-0 w-full h-2.5 sm:h-3 bg-[#EBA818]/30 -z-0 rounded-xs"
                   aria-hidden="true"
                 />
               </span>{" "}
@@ -47,43 +47,43 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* Subtitle - exactly as requested */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed max-w-2xl">
               <strong className="text-slate-900 font-semibold">ZOÉ DIGITECH</strong> aide les
               entrepreneurs et les entreprises à développer leur visibilité, attirer plus de clients
               et automatiser leurs activités grâce aux technologies numériques.
             </p>
 
             {/* Action buttons (CTAs) */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               {/* Primary WhatsApp CTA */}
               <a
                 href={buildWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-[#123952] hover:bg-[#0A2234] text-white font-semibold text-sm sm:text-base shadow-sm hover:shadow-md transition-all active:scale-[0.99] group text-center"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-4 sm:px-6 py-3.5 rounded-lg bg-[#1A659E] hover:bg-[#124C77] text-white font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all active:scale-[0.99] group text-center min-h-[48px]"
               >
-                <MessageCircle className="w-5 h-5 text-[#EBA818] group-hover:scale-110 transition-transform" />
-                <span>Parler à un expert sur WhatsApp</span>
+                <MessageCircle className="w-5 h-5 text-[#EBA818] group-hover:scale-110 transition-transform shrink-0" />
+                <span className="text-center">Parler à un expert sur WhatsApp</span>
               </a>
 
               {/* Secondary CTA */}
               <a
                 href="#solutions"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm sm:text-base border border-slate-200 shadow-2xs hover:border-slate-300 transition-colors text-center"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm sm:text-base border border-slate-200 shadow-2xs hover:border-slate-300 transition-colors text-center min-h-[46px]"
               >
                 <span>Découvrir nos solutions</span>
-                <ArrowRight className="w-4 h-4 text-[#123952]" />
+                <ArrowRight className="w-4 h-4 text-[#1A659E] shrink-0" />
               </a>
             </div>
 
             {/* Proof Points & Anti-objection bullet points */}
-            <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-slate-200/80 text-xs sm:text-sm text-slate-600">
+            <div className="pt-3 sm:pt-4 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 border-t border-slate-200/80 text-xs sm:text-sm text-slate-600">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#EBA818] shrink-0" />
                 <span>Diagnostic 100% gratuit</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#123952] shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#1A659E] shrink-0" />
                 <span>Solutions adaptées aux PME</span>
               </div>
               <div className="flex items-center gap-2">
@@ -94,11 +94,11 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Right Column: Visual representation of African tech business */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
               
               {/* Outer decorative frame */}
-              <div className="relative rounded-2xl p-2 bg-gradient-to-tr from-[#123952]/10 via-white to-[#EBA818]/15 shadow-xl border border-slate-200/60">
+              <div className="relative rounded-2xl p-1.5 sm:p-2 bg-gradient-to-tr from-[#1A659E]/10 via-white to-[#EBA818]/15 shadow-xl border border-slate-200/60">
                 <div className="relative aspect-[16/11] rounded-xl overflow-hidden bg-slate-900">
                   <img
                     src={heroImg}
@@ -111,7 +111,7 @@ export const Hero: React.FC = () => {
                       const target = e.target as HTMLElement;
                       target.style.display = "none";
                       if (target.parentElement) {
-                        target.parentElement.classList.add("bg-gradient-to-br", "from-[#123952]", "to-[#0A2234]");
+                        target.parentElement.classList.add("bg-gradient-to-br", "from-[#1A659E]", "to-[#124C77]");
                       }
                     }}
                   />
@@ -122,23 +122,23 @@ export const Hero: React.FC = () => {
                     aria-hidden="true"
                   />
 
-                  {/* Real-time trust indicator overlay */}
-                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-white/95 backdrop-blur-md shadow-md border border-white/40 flex items-center justify-between text-left">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-md bg-[#123952] flex items-center justify-center text-[#EBA818] font-bold text-xs">
+                  {/* Real-time trust indicator overlay - responsive for small screens */}
+                  <div className="absolute bottom-2.5 sm:bottom-3 left-2.5 sm:left-3 right-2.5 sm:right-3 p-2.5 sm:p-3 rounded-lg bg-white/95 backdrop-blur-md shadow-md border border-white/40 flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 text-left">
+                    <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-md bg-[#1A659E] flex items-center justify-center text-[#EBA818] font-bold text-xs shrink-0">
                         ZD
                       </div>
-                      <div>
-                        <p className="text-xs font-bold text-slate-900 leading-tight">
+                      <div className="min-w-0">
+                        <p className="text-xs font-bold text-slate-900 leading-tight truncate">
                           Transformation Digitale & IA
                         </p>
-                        <p className="text-[11px] text-slate-500">
-                          Accompagnement pragmatique au Cameroun
+                        <p className="text-[10px] sm:text-[11px] text-slate-500 truncate">
+                          Accompagnement pragmatique
                         </p>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                    <div className="text-right shrink-0">
+                      <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                         Dispo WhatsApp
                       </span>
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
                 aria-hidden="true"
               >
                 <p className="text-[11px] text-slate-500 font-medium">Objectif mesurable</p>
-                <p className="font-bold text-[#123952]">Visibilité · Clients · Gain de temps</p>
+                <p className="font-bold text-[#1A659E]">Visibilité · Clients · Gain de temps</p>
               </div>
             </div>
           </div>

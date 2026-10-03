@@ -14,12 +14,12 @@ import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-[#EBA818]/25 selection:text-[#123952]">
+    <div className="min-h-screen w-full overflow-x-hidden bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-[#EBA818]/25 selection:text-[#1A659E] pb-16 sm:pb-0">
       {/* 3-Zone Top Navigation Bar */}
       <Navbar />
 
       {/* Main Landing Page Flow */}
-      <main className="flex-1">
+      <main className="flex-1 w-full overflow-x-hidden">
         {/* 1. Hero Section */}
         <Hero />
 

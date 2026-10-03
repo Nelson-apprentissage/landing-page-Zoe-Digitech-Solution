@@ -140,7 +140,7 @@ export const PortfolioSection: React.FC = () => {
           <p className="text-xs font-bold uppercase tracking-wider text-[#EBA818] mb-2 font-mono">
             Exemples Concrets
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#123952] tracking-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A659E] tracking-tight text-balance">
             Nos Démonstrations & Réalisations
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
@@ -150,7 +150,7 @@ export const PortfolioSection: React.FC = () => {
         </div>
 
         {/* Category Filters (Clean Functional Segmented Controls) */}
-        <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-4 mb-8 gap-2 no-scrollbar">
+        <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-3 mb-6 sm:mb-8 gap-2 no-scrollbar px-1 -mx-4 sm:mx-0 px-4 sm:px-0">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.key;
             return (
@@ -158,9 +158,9 @@ export const PortfolioSection: React.FC = () => {
                 key={cat.key}
                 type="button"
                 onClick={() => setActiveCategory(cat.key)}
-                className={`px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
+                className={`px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap min-h-[40px] shrink-0 ${
                   isActive
-                    ? "bg-[#123952] text-white shadow-xs"
+                    ? "bg-[#1A659E] text-white shadow-xs"
                     : "bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200"
                 }`}
               >
@@ -175,7 +175,7 @@ export const PortfolioSection: React.FC = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white rounded-xl border border-slate-200/90 overflow-hidden hover:shadow-lg hover:border-[#123952]/40 transition-all duration-200 flex flex-col justify-between"
+              className="group bg-white rounded-xl border border-slate-200/90 overflow-hidden hover:shadow-lg hover:border-[#1A659E]/40 transition-all duration-200 flex flex-col justify-between"
             >
               <div>
                 {/* Image showcase */}
@@ -188,20 +188,20 @@ export const PortfolioSection: React.FC = () => {
                     referrerPolicy="no-referrer"
                   />
                   {/* Clean unboxed tag for Demo Project */}
-                  <div className="absolute top-3 left-3 bg-[#123952]/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
+                  <div className="absolute top-3 left-3 bg-[#1A659E]/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
                     {project.typeBadge}
                   </div>
-                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-[#123952] text-[11px] font-semibold px-2 py-0.5 rounded shadow-2xs">
+                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-[#1A659E] text-[11px] font-semibold px-2 py-0.5 rounded shadow-2xs">
                     {project.categoryLabel}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-5 sm:p-6">
+                <div className="p-4 sm:p-6">
                   <p className="text-[11px] text-slate-500 font-medium mb-1.5">
                     {project.targetSector}
                   </p>
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-[#123952] transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-[#1A659E] transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed mb-4">
@@ -220,11 +220,11 @@ export const PortfolioSection: React.FC = () => {
               </div>
 
               {/* Bottom Actions */}
-              <div className="px-5 sm:px-6 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
                 <button
                   type="button"
                   onClick={() => setSelectedProject(project)}
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#123952] hover:text-[#EBA818] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#1A659E] hover:text-[#EBA818] transition-colors min-h-[44px] py-1"
                 >
                   <Eye className="w-4 h-4" />
                   <span>Voir les détails</span>
@@ -236,7 +236,7 @@ export const PortfolioSection: React.FC = () => {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 min-h-[44px] px-2"
                   title="Demander une solution similaire sur WhatsApp"
                 >
                   <MessageCircle className="w-4 h-4 text-[#EBA818]" />
@@ -250,22 +250,22 @@ export const PortfolioSection: React.FC = () => {
         {/* Modal for viewing project details */}
         {selectedProject && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200"
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200"
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-modal-title"
           >
-            <div className="relative w-full max-w-xl bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+            <div className="relative w-full max-w-xl bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl border border-slate-100 max-h-[92vh] overflow-y-auto">
               <button
                 type="button"
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
                 aria-label="Fermer"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="aspect-[16/9] rounded-xl overflow-hidden mb-5 bg-slate-100">
+              <div className="aspect-[16/9] rounded-xl overflow-hidden mb-4 sm:mb-5 bg-slate-100">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -273,11 +273,11 @@ export const PortfolioSection: React.FC = () => {
                 />
               </div>
 
-              <div className="inline-block bg-[#123952] text-white text-[11px] font-bold px-2 py-0.5 rounded mb-2">
+              <div className="inline-block bg-[#1A659E] text-white text-[11px] font-bold px-2 py-0.5 rounded mb-2">
                 {selectedProject.typeBadge} · {selectedProject.categoryLabel}
               </div>
 
-              <h3 id="project-modal-title" className="text-xl font-bold text-[#123952] mb-2">
+              <h3 id="project-modal-title" className="text-lg sm:text-xl font-bold text-[#1A659E] mb-1.5 sm:mb-2 leading-snug">
                 {selectedProject.title}
               </h3>
 
@@ -285,13 +285,13 @@ export const PortfolioSection: React.FC = () => {
                 Conçu pour : {selectedProject.targetSector}
               </p>
 
-              <div className="space-y-4 text-xs sm:text-sm text-slate-600 mb-6">
+              <div className="space-y-4 text-xs sm:text-sm text-slate-600 mb-5 sm:mb-6">
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Objectif du projet :</h4>
                   <p className="leading-relaxed">{selectedProject.objective}</p>
                 </div>
 
-                <div className="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <div className="p-3.5 sm:p-4 bg-slate-50 rounded-lg border border-slate-200">
                   <h4 className="font-bold text-slate-900 mb-2">Fonctionnalités intégrées :</h4>
                   <ul className="space-y-1.5">
                     {selectedProject.features.map((feat, idx) => (
@@ -304,22 +304,22 @@ export const PortfolioSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
                 <a
                   href={buildWhatsAppLink(
                     `Bonjour Zoé Digitech, j'ai vu votre modèle "${selectedProject.title}" et je souhaite obtenir un devis pour mon entreprise.`
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-[#123952] hover:bg-[#0A2234] text-white text-xs sm:text-sm font-semibold transition-colors"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-[#1A659E] hover:bg-[#124C77] text-white text-xs sm:text-sm font-semibold transition-colors min-h-[44px] text-center"
                 >
                   <MessageCircle className="w-4 h-4 text-[#EBA818]" />
-                  <span>Vouloir la même solution pour mon activité</span>
+                  <span>Vouloir la même solution</span>
                 </a>
                 <button
                   type="button"
                   onClick={() => setSelectedProject(null)}
-                  className="py-3 px-4 rounded-lg border border-slate-200 text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-50"
+                  className="py-3 px-4 rounded-lg border border-slate-200 text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-50 min-h-[44px]"
                 >
                   Fermer
                 </button>

@@ -4,26 +4,32 @@ interface LogoProps {
   className?: string;
   variant?: "full" | "mark" | "stacked";
   theme?: "light" | "dark";
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl" | "responsive";
 }
 
 export const Logo: React.FC<LogoProps> = ({
   className = "",
   variant = "full",
   theme = "light",
-  size = "md",
+  size = "responsive",
 }) => {
+  const isDark = theme === "dark";
+  const primaryStroke = isDark ? "#FFFFFF" : "#1A659E";
+
+  // Responsive vs static size configurations
+  const isResponsive = size === "responsive";
+
   const sizeMap = {
-    sm: { mark: 32, textScale: "text-base", subScale: "text-[9px]" },
-    md: { mark: 42, textScale: "text-xl", subScale: "text-[11px]" },
-    lg: { mark: 56, textScale: "text-2xl", subScale: "text-xs" },
-    xl: { mark: 72, textScale: "text-3xl", subScale: "text-sm" },
+    sm: { mark: 28, textScale: "text-sm sm:text-base", subScale: "text-[8px] sm:text-[9px]" },
+    md: { mark: 36, textScale: "text-base sm:text-xl", subScale: "text-[9px] sm:text-[11px]" },
+    lg: { mark: 48, textScale: "text-xl sm:text-2xl", subScale: "text-[10px] sm:text-xs" },
+    xl: { mark: 64, textScale: "text-2xl sm:text-3xl", subScale: "text-xs sm:text-sm" },
+    responsive: { mark: 34, textScale: "text-sm xs:text-base sm:text-xl", subScale: "text-[8px] xs:text-[9px] sm:text-[10px]" },
   };
 
   const currentSize = sizeMap[size];
 
-  // SVG Mark matching exact geometry from user's brand logo:
-  // Concentric yellow and navy rings with stylized Z-D tech monogram
+  // SVG Mark matching exact geometry from user's brand logo
   const LogoMark = (
     <svg
       width={currentSize.mark}
@@ -42,20 +48,20 @@ export const Logo: React.FC<LogoProps> = ({
         stroke="#EBA818"
         strokeWidth="3.5"
       />
-      {/* Inner Navy Blue Ring */}
+      {/* Inner Ring (adapts to light / dark background for 100% contrast) */}
       <circle
         cx="70"
         cy="70"
         r="57"
-        stroke="#123952"
+        stroke={primaryStroke}
         strokeWidth="2.5"
       />
 
-      {/* Monogram Shape: Deep Navy outer frame + Gold Z interior */}
-      {/* Upper Navy bar & right stem */}
+      {/* Monogram Shape: Primary frame + Gold Z interior */}
+      {/* Upper bar & right stem */}
       <path
         d="M38 43H92C97.5228 43 102 47.4772 102 53V87C102 92.5228 97.5228 97 92 97H38V85H89C90.1046 85 91 84.1046 91 83V57C91 55.8954 90.1046 55 89 55H38V43Z"
-        fill="#123952"
+        fill={primaryStroke}
       />
 
       {/* Diagonal & Inner Gold 'Z' element */}
@@ -74,40 +80,38 @@ export const Logo: React.FC<LogoProps> = ({
         fill="#EBA818"
       />
 
-      {/* Bottom connecting bar in Navy */}
+      {/* Bottom connecting bar */}
       <rect
         x="38"
         y="86"
         width="54"
         height="11"
         rx="2"
-        fill="#123952"
+        fill={primaryStroke}
       />
     </svg>
   );
 
   if (variant === "mark") {
-    return <div className={`inline-flex items-center ${className}`}>{LogoMark}</div>;
+    return <div className={`inline-flex items-center shrink-0 ${className}`}>{LogoMark}</div>;
   }
 
-  const isDark = theme === "dark";
-
   return (
-    <div className={`inline-flex items-center gap-3 select-none ${className}`}>
+    <div className={`inline-flex items-center gap-2 sm:gap-3 select-none shrink-0 ${className}`}>
       {LogoMark}
       <div className="flex flex-col items-center justify-center leading-none text-center">
-        <div className={`font-bold tracking-tight ${currentSize.textScale} flex items-baseline justify-center gap-1.5`}>
+        <div className={`font-bold tracking-tight ${currentSize.textScale} flex items-baseline justify-center gap-1 sm:gap-1.5 whitespace-nowrap`}>
           <span className="text-[#EBA818] font-extrabold font-display">ZOÉ</span>
           <span
             className={`font-display font-extrabold tracking-tight ${
-              isDark ? "text-white" : "text-[#123952]"
+              isDark ? "text-white" : "text-[#1A659E]"
             }`}
           >
             DIGITECH
           </span>
         </div>
         <span
-          className={`font-semibold tracking-[0.35em] pl-[0.35em] uppercase ${currentSize.subScale} text-[#EBA818] mt-1 text-center w-full block`}
+          className={`font-semibold tracking-[0.32em] pl-[0.32em] uppercase ${currentSize.subScale} text-[#EBA818] mt-0.5 sm:mt-1 text-center w-full block`}
         >
           SOLUTION
         </span>

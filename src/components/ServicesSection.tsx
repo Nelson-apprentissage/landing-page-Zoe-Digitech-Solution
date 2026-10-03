@@ -138,7 +138,7 @@ export const ServicesSection: React.FC = () => {
           <p className="text-xs font-bold uppercase tracking-wider text-[#EBA818] mb-2 font-mono">
             Nos Domaines d'Intervention
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#123952] tracking-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A659E] tracking-tight text-balance">
             Une seule agence pour accélérer votre transformation digitale.
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
@@ -156,7 +156,7 @@ export const ServicesSection: React.FC = () => {
             return (
               <div
                 key={service.id}
-                className={`relative bg-white rounded-xl border border-slate-200/80 p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:shadow-lg hover:border-[#123952]/40 group ${
+                className={`relative bg-white rounded-xl border border-slate-200/80 p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:shadow-lg hover:border-[#1A659E]/40 group ${
                   index === 4 ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
@@ -166,16 +166,16 @@ export const ServicesSection: React.FC = () => {
                     <span className="text-xs font-bold font-mono text-[#EBA818] bg-[#FEF7E9] px-2.5 py-1 rounded">
                       {service.number}
                     </span>
-                    <div className="w-10 h-10 rounded-lg bg-[#123952]/5 text-[#123952] flex items-center justify-center group-hover:bg-[#123952] group-hover:text-[#EBA818] transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-[#1A659E]/10 text-[#1A659E] flex items-center justify-center group-hover:bg-[#1A659E] group-hover:text-white transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
                   {/* Title & Subtitle */}
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-[#123952] transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-[#1A659E] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs sm:text-sm font-medium text-[#123952]/80 mb-3">
+                  <p className="text-xs sm:text-sm font-medium text-[#1A659E]/90 mb-3">
                     {service.subtitle}
                   </p>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
@@ -188,7 +188,7 @@ export const ServicesSection: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setActiveModal(service)}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#123952] hover:text-[#EBA818] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#1A659E] hover:text-[#EBA818] transition-colors py-2 min-h-[44px]"
                   >
                     <span>En savoir plus</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -198,7 +198,7 @@ export const ServicesSection: React.FC = () => {
                     href={buildWhatsAppLink(service.whatsappMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-md text-slate-400 hover:text-[#123952] hover:bg-slate-100 transition-colors"
+                    className="p-2.5 rounded-md text-slate-400 hover:text-[#1A659E] hover:bg-slate-100 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
                     title={`Discuter de ${service.title} sur WhatsApp`}
                     aria-label={`Discuter de ${service.title} sur WhatsApp`}
                   >
@@ -213,39 +213,39 @@ export const ServicesSection: React.FC = () => {
         {/* Modal for "En savoir plus" */}
         {activeModal && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200"
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
           >
-            <div className="relative w-full max-w-lg bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+            <div className="relative w-full max-w-lg bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl border border-slate-100 max-h-[92vh] overflow-y-auto">
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}
-                className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
                 aria-label="Fermer la boîte de dialogue"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-11 h-11 rounded-lg bg-[#123952] text-[#EBA818] flex items-center justify-center font-bold">
+              <div className="flex items-center gap-3 mb-4 pr-8">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#1A659E] text-white flex items-center justify-center font-bold shrink-0">
                   {activeModal.number}
                 </div>
                 <div>
-                  <h3 id="modal-title" className="text-xl font-bold text-[#123952]">
+                  <h3 id="modal-title" className="text-lg sm:text-xl font-bold text-[#1A659E] leading-snug">
                     {activeModal.title}
                   </h3>
                   <p className="text-xs text-slate-500">{activeModal.subtitle}</p>
                 </div>
               </div>
 
-              <p className="text-sm text-slate-700 leading-relaxed mb-5">
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 sm:mb-5">
                 {activeModal.description}
               </p>
 
-              <div className="mb-5 p-3.5 bg-slate-50 rounded-lg border border-slate-200/80">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#123952] mb-2.5">
+              <div className="mb-4 sm:mb-5 p-3 sm:p-3.5 bg-slate-50 rounded-lg border border-slate-200/80">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#1A659E] mb-2 sm:mb-2.5">
                   Ce qui est inclus dans cette solution :
                 </h4>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-600">
@@ -258,16 +258,16 @@ export const ServicesSection: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="mb-6 p-3 rounded-lg bg-[#FEF7E9] text-xs text-amber-900 border border-[#EBA818]/30">
+              <div className="mb-5 sm:mb-6 p-3 rounded-lg bg-[#FEF7E9] text-xs text-amber-900 border border-[#EBA818]/30">
                 <strong>Cas d'usage :</strong> {activeModal.audienceExample}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
                 <a
                   href={buildWhatsAppLink(activeModal.whatsappMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-[#123952] hover:bg-[#0A2234] text-white text-xs sm:text-sm font-semibold transition-colors"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-[#1A659E] hover:bg-[#124C77] text-white text-xs sm:text-sm font-semibold transition-colors min-h-[44px] text-center"
                 >
                   <MessageCircle className="w-4 h-4 text-[#EBA818]" />
                   <span>Demander un devis sur WhatsApp</span>
@@ -275,7 +275,7 @@ export const ServicesSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setActiveModal(null)}
-                  className="py-3 px-4 rounded-lg border border-slate-200 text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-50"
+                  className="py-3 px-4 rounded-lg border border-slate-200 text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-50 min-h-[44px]"
                 >
                   Fermer
                 </button>

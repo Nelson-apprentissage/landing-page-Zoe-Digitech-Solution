@@ -51,7 +51,7 @@ export const ProcessSection: React.FC = () => {
           <p className="text-xs font-bold uppercase tracking-wider text-[#EBA818] mb-2 font-mono">
             Une Méthode Éprouvée
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#123952] tracking-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A659E] tracking-tight text-balance">
             Comment ça marche ?
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
@@ -67,12 +67,12 @@ export const ProcessSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="relative bg-white rounded-xl border border-slate-200/90 p-6 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-[#123952]/40 transition-all group"
+                className="relative bg-white rounded-xl border border-slate-200/90 p-6 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-[#1A659E]/40 transition-all group"
               >
                 <div>
                   {/* Step number and badge */}
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-extrabold font-mono text-[#123952] group-hover:text-[#EBA818] transition-colors">
+                    <span className="text-2xl font-extrabold font-mono text-[#1A659E] group-hover:text-[#EBA818] transition-colors">
                       {item.step}
                     </span>
                     <span className="text-[11px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
@@ -80,7 +80,7 @@ export const ProcessSection: React.FC = () => {
                     </span>
                   </div>
 
-                  <div className="w-10 h-10 rounded-lg bg-[#123952]/5 text-[#123952] flex items-center justify-center mb-4 group-hover:bg-[#123952] group-hover:text-[#EBA818] transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-[#1A659E]/10 text-[#1A659E] flex items-center justify-center mb-4 group-hover:bg-[#1A659E] group-hover:text-white transition-colors">
                     <Icon className="w-5 h-5" />
                   </div>
 
@@ -88,7 +88,7 @@ export const ProcessSection: React.FC = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm font-semibold text-[#123952] mb-3 leading-snug">
+                  <p className="text-xs sm:text-sm font-semibold text-[#1A659E] mb-3 leading-snug">
                     {item.summary}
                   </p>
 
@@ -111,7 +111,7 @@ export const ProcessSection: React.FC = () => {
             href={buildWhatsAppLink("Bonjour Zoé Digitech, je souhaite démarrer par l'Étape 01 : le diagnostic de mon entreprise.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-[#123952] hover:bg-[#0A2234] text-white font-semibold text-xs sm:text-sm shadow-xs transition-colors"
+            className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-[#1A659E] hover:bg-[#124C77] text-white font-semibold text-xs sm:text-sm shadow-xs transition-colors"
           >
             <span>Commencer par l'Étape 01 (Diagnostic)</span>
             <ArrowRight className="w-4 h-4 text-[#EBA818]" />

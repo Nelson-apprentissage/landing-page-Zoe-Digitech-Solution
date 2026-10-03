@@ -7,13 +7,13 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0A2234] text-slate-300 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+    <footer className="bg-[#0E3655] text-slate-300 border-t border-[#124C77]/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10">
           
           {/* Brand info */}
           <div className="lg:col-span-5 space-y-4 text-left">
-            <Logo size="lg" theme="dark" />
+            <Logo size="responsive" theme="dark" />
             <p className="text-xs sm:text-sm text-slate-400 max-w-md leading-relaxed">
               {AGENCY_CONFIG.tagline}
             </p>
@@ -95,11 +95,11 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom copyright line */}
-        <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-[#124C77]/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-center sm:text-left">
           <p>
             © {currentYear} {AGENCY_CONFIG.fullName}. Tous droits réservés.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a href="#solutions" className="hover:text-slate-400 transition-colors">
               Services
             </a>

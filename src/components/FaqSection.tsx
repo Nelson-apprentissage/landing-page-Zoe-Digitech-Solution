@@ -61,7 +61,7 @@ export const FaqSection: React.FC = () => {
           <p className="text-xs font-bold uppercase tracking-wider text-[#EBA818] mb-2 font-mono">
             Transparence Totale
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#123952] tracking-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A659E] tracking-tight text-balance">
             Questions Fréquemment Posées
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
@@ -81,23 +81,23 @@ export const FaqSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => toggle(index)}
-                  className="w-full text-left px-5 sm:px-6 py-4 flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-slate-900 hover:text-[#123952] transition-colors"
+                  className="w-full text-left px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between gap-3 sm:gap-4 font-semibold text-sm sm:text-base text-slate-900 hover:text-[#1A659E] transition-colors min-h-[48px]"
                   aria-expanded={isOpen}
                 >
-                  <span className="flex items-center gap-3">
+                  <span className="flex items-center gap-2.5 sm:gap-3">
                     <HelpCircle className="w-4 h-4 text-[#EBA818] shrink-0" />
-                    <span>{faq.question}</span>
+                    <span className="leading-snug">{faq.question}</span>
                   </span>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#123952]" : ""
+                      isOpen ? "rotate-180 text-[#1A659E]" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
-                    <p className="pl-7">{faq.answer}</p>
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+                    <p className="sm:pl-7">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -106,9 +106,9 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Objection reducer prompt */}
-        <div className="mt-10 p-5 rounded-xl bg-slate-50 border border-slate-200 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 sm:mt-10 p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
-            <p className="text-sm font-bold text-slate-900">
+            <p className="text-xs sm:text-sm font-bold text-slate-900">
               Vous avez une autre question spécifique à votre activité ?
             </p>
             <p className="text-xs text-slate-500">
@@ -119,7 +119,7 @@ export const FaqSection: React.FC = () => {
             href={buildWhatsAppLink("Bonjour Zoé Digitech, j'ai une question sur vos prestations : ")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#123952] hover:bg-[#0A2234] text-white px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-colors shrink-0"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#1A659E] hover:bg-[#124C77] text-white px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-colors shrink-0 min-h-[44px]"
           >
             <MessageCircle className="w-4 h-4 text-[#EBA818]" />
             <span>Poser ma question sur WhatsApp</span>

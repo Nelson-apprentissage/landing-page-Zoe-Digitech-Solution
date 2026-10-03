@@ -5,25 +5,44 @@
   --font-display: "Syne", "Plus Jakarta Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-brand-navy: #123952;
-  --color-brand-navy-dark: #0A2234;
-  --color-brand-navy-light: #1A4E70;
+  --color-brand-navy: #1A659E;
+  --color-brand-navy-dark: #124C77;
+  --color-brand-navy-light: #2A7BB8;
+  --color-brand-blue: #1A659E;
+  --color-brand-blue-dark: #124C77;
+  --color-brand-blue-deep: #0E3655;
+  --color-brand-blue-light: #2A7BB8;
   --color-brand-gold: #EBA818;
   --color-brand-gold-hover: #D6940A;
   --color-brand-gold-light: #FEF7E9;
 }
 
 @layer base {
-  html {
+  html, body, #root {
     font-family: var(--font-sans);
     color: #0f172a;
     background-color: #f8fafc;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
   }
 
   h1, h2, h3, .font-display {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
+}
+
+/* Hide scrollbar for horizontal swipe tabs on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Subtle focus ring style for accessibility */

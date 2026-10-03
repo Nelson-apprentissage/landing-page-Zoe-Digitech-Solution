@@ -47,7 +47,7 @@ export const WhyChooseUs: React.FC = () => {
           <p className="text-xs font-bold uppercase tracking-wider text-[#EBA818] mb-2 font-mono">
             Nos Engagements
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#123952] tracking-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A659E] tracking-tight text-balance">
             Pourquoi choisir ZOÉ DIGITECH ?
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
@@ -63,12 +63,12 @@ export const WhyChooseUs: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="relative p-7 rounded-xl bg-slate-50/80 border border-slate-200 hover:border-[#123952]/40 transition-all duration-200 hover:shadow-md flex flex-col justify-between"
+                className="relative p-7 rounded-xl bg-slate-50/80 border border-slate-200 hover:border-[#1A659E]/40 transition-all duration-200 hover:shadow-md flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-[#123952] text-[#EBA818] flex items-center justify-center shadow-xs">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-12 h-12 rounded-lg bg-[#1A659E] text-white flex items-center justify-center shadow-xs">
+                      <Icon className="w-6 h-6 text-[#EBA818]" />
                     </div>
                     <span className="text-xs font-mono font-bold text-slate-400">
                       {pillar.number}
@@ -84,7 +84,7 @@ export const WhyChooseUs: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-[#123952]">
+                <div className="pt-3 border-t border-slate-200/60 flex items-center gap-2 text-xs font-semibold text-[#1A659E]">
                   <CheckCircle className="w-4 h-4 text-[#EBA818] shrink-0" />
                   <span>{pillar.highlight}</span>
                 </div>
@@ -102,7 +102,7 @@ export const WhyChooseUs: React.FC = () => {
             href={buildWhatsAppLink("Bonjour Zoé Digitech, je souhaite échanger de vive voix sur la faisabilité de mon projet numérique.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#123952] hover:text-[#EBA818] underline underline-offset-4 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#1A659E] hover:text-[#EBA818] underline underline-offset-4 transition-colors"
           >
             <span>Posez directement votre question à notre équipe sur WhatsApp</span>
             <span aria-hidden="true">→</span>
