@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Syne", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-navy: #123952;
+  --color-brand-navy-dark: #0A2234;
+  --color-brand-navy-light: #1A4E70;
+  --color-brand-gold: #EBA818;
+  --color-brand-gold-hover: #D6940A;
+  --color-brand-gold-light: #FEF7E9;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Subtle focus ring style for accessibility */
+*:focus-visible {
+  outline: 2px solid #EBA818;
+  outline-offset: 2px;
+}
